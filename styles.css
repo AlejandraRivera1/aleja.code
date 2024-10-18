@@ -26,7 +26,7 @@
     --font-weight-regular: 400; 
 }
 
-main{
+section{
     background-color: var(--white);
 }
 
