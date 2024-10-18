@@ -26,7 +26,7 @@
     --font-weight-regular: 400; 
 }
 
-header{
+header {
     position: fixed;
     top: 0; 
     left: 0; 
@@ -36,7 +36,7 @@ header{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header nav{
+header nav {
     width: 100%;
     height: 100px;
     display: flex;
@@ -54,11 +54,11 @@ header nav a {
     color: var(--dark-gray);
 }
 
-header nav a:hover{
+header nav a:hover {
     color: var(--turquoise);
 }
 
-header nav .nav-left-section a{
+header nav .nav-left-section a {
     color: var(--navy-blue);
 }
 
@@ -68,7 +68,7 @@ header nav .nav-left-section {
     align-items: center;
 }
 
-header nav .nav-rigth-section {
+header nav .nav-right-section {
     display: flex;
     list-style: none;
     align-items: center;
@@ -316,7 +316,7 @@ hr {
 }
 
 .technologies h4 {
-    margin-bottom: 10px; /* Espacio entre el título y las tecnologías */
+    margin-bottom: 10px;
 }
 
 .tech-item{
@@ -327,9 +327,9 @@ hr {
 }
 
 .tech-items-container {
-    display: flex; /* Alinea las tecnologías en fila */
-    justify-content: center; /* Centra las tecnologías en la fila */
-    flex-wrap: wrap; /* Permite que se ajusten si no hay suficiente espacio */
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
 }
 
 .tech-item img{
@@ -451,3 +451,59 @@ footer{
     margin: 20px;
     text-align: center;
 }
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header nav {
+        padding-left: 10px; 
+        padding-right: 10px; 
+    }
+
+    header nav .nav-right-section {
+        gap: 10px;
+    }
+}
+
+@media (min-width: 481px) {
+    header nav .menu-button {
+        display: none; 
+    }
+}
+
+@media (max-width: 480px) {
+    header nav .nav-right-section {
+        display: none; /* Oculta la lista de navegación */
+        flex-direction: column; /* Asegúrate de que se alinee en columna */
+        position: absolute; /* Posición absoluta para el menú */
+        top: 100%; /* Coloca el menú justo debajo del botón */
+        left: 0; /* Alinea a la izquierda */
+        background-color: var(--white); /* Color de fondo del menú */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de profundidad */
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        width: 100%; /* Ancho completo del menú */
+    }
+
+    header nav .menu-button {
+        display: block; /* Muestra el botón "Menu" */
+        background-color: var(--turquoise); 
+        color: var(--white); 
+        font-size: var(--font-size-button);
+        font-weight: var(--font-weight-bold);
+        border: none; 
+        border-radius: 10px;
+        padding: 10px; 
+        cursor: pointer; 
+    }
+
+    header nav .nav-right-section li {
+        padding: 10px; /* Espaciado para los elementos de la lista */
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    header nav .menu-button:hover {
+        background-color: var(--gold); 
+        color: var(--white); 
+    }
+}
+
