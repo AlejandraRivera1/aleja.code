@@ -26,7 +26,7 @@
     --font-weight-regular: 400; 
 }
 
-section{
+main{
     background-color: var(--white);
 }
 
@@ -492,14 +492,23 @@ h2, h3 {
 
     #About {
         display: block; 
-        text-align: center; 
         margin-top: 110px; 
+        padding: 0 40px;
     }
 
     .text-column-about {
         margin-bottom: 40px; 
     }
+    
 
+    .text-column-about p{
+        text-align: center;
+    }
+
+    .download-button{
+        display: flex; 
+        flex-wrap: wrap; 
+    }
     .skills {
         display: flex; 
         flex-wrap: wrap; 
