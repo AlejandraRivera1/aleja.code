@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
 :root {
     --white: #ffffff;
     --soft-gray: #666666;
@@ -19,14 +26,9 @@
     --font-weight-regular: 400; 
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
+main{
     background-color: var(--white);
 }
-
 
 header {
     position: fixed;
