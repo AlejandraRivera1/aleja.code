@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const menuItems = menuList.querySelectorAll('li'); 
 
     // Inicialmente ocultar el menú en pantallas pequeñas
-    if (window.innerWidth <= 480) {
+    if (window.innerWidth <= 600) {
         menuList.style.display = 'none';
     }
 
@@ -19,8 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
     menuItems.forEach(item => {
         item.addEventListener("click", function () {
             // Oculta el menú solo si la pantalla es pequeña
-            if (window.innerWidth <= 480) {
+            if (window.innerWidth <= 600) {
                 menuList.style.display = "none";
+            } else {
+                menuList.style.display = 'flex'; // Muestra el menú en pantallas grandes
             }
 
             // Desplaza la página hacia la sección correspondiente
@@ -32,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
             window.scrollTo({
                 top: targetElement.offsetTop - headerHeight,
                 behavior: 'smooth'
-            });            
+            });            A
         });
     });
 });
