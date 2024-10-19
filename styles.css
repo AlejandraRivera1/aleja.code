@@ -12,6 +12,7 @@
     --navy-blue: #003366;
     --turquoise: #00b2a9;
     --gold: #daa520;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
     --font-size-h1: 48px; 
     --font-size-h2: 36px; 
@@ -37,7 +38,7 @@ header {
     width: 100%;
     background-color: var(--white);
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
 }
 
 header nav {
@@ -91,7 +92,7 @@ header nav img {
 #About-header,
 #Projects-header {
     background-color: rgba(0, 178, 169, 0); /* Totalmente transparente */
-    border: none; /* Sin borde */
+    border: none; 
 }
 
 /* Estilo para la sección principal */
@@ -232,11 +233,12 @@ header nav img {
    height: auto;
    width: auto;
    margin-top: 150px;
-   margin-bottom: 150px;
    margin-left: auto;
    margin-right: auto;
    background-color: var(--white);
-   padding: 0 40px;
+   padding-left: 40px;
+   padding-right: 40px;
+   padding-bottom: 100px;
 }
 
 .Projects-tittle h2{
@@ -280,7 +282,7 @@ header nav img {
     height: 150px;
     border-radius: 15px;
     border: 1px solid var(--soft-gray);
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
     
 }
 
@@ -506,8 +508,24 @@ h2, h3 {
     }
 
     .download-button{
-        display: flex; 
-        flex-wrap: wrap; 
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .download-button {
+        display: block;              
+        max-width: 160px;           
+        width: 100%;                
+        margin: 0 auto;             
+        padding: 10px;         
+        font-size: 16px;            
+        border: none;               
+        border-radius: 5px;         
+        background-color: var(--navy-blue); 
+        color: var(--white);        
+        cursor: pointer;            
+        text-align: center;         
     }
     .skills {
         display: flex; 
@@ -574,10 +592,10 @@ h2, h3 {
 
     header nav .menu-button {
         display: block; /* Muestra el botón "Menu" */
-        background-color: var(--turquoise); 
-        color: var(--white); 
-        font-size: var(--font-size-button);
-        font-weight: var(--font-weight-bold);
+        background-color: transparent; 
+        color: var(--turquoise);
+        font-size: 18px; 
+        font-weight: var(--font-weight-bold); 
         border: none; 
         border-radius: 10px;
         padding: 10px; 
@@ -590,8 +608,13 @@ h2, h3 {
     }
 
     header nav .menu-button:hover {
-        background-color: var(--gold); 
-        color: var(--white); 
+        background-color: transparent; 
+        color: var(--gold);
+    }
+
+    .text-column-about {
+        padding-right: 0px;
     }
 }
+
 

@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", function() {
             const offsetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
 
             window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth" // Desplazamiento suave
-            });
+                top: targetElement.offsetTop - headerHeight,
+                behavior: 'smooth'
+            });            
         });
     });
 });
