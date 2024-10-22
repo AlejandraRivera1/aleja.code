@@ -839,6 +839,7 @@ footer ul li{
     header nav .nav-right-section li {
         padding: 10px; 
         text-align: left;
+        background-color: var(--transparent);
     }
 
     header nav .menu-button:hover {
