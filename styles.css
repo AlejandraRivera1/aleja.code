@@ -27,6 +27,9 @@
     --font-weight-regular: 400; 
 }
 
+/* Dark mode*/
+
+/* ligth mode*/
 main{
     background-color: var(--white);
 }
@@ -673,4 +676,11 @@ h2, h3 {
         padding-right: 0px;
     }
 }
+
+@media (max-width: 480px) {
+    .nav-left-section span {
+        display: none; /* Oculta solo el texto en el span */
+    }
+}
+
 

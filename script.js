@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const languageButton = document.querySelector('.language');
+    const darkModeButton = document.querySelector('.dark-mode');
     const menuButton = document.querySelector('.menu-button');
     const menuList = document.querySelector('.nav-right-section');
-    const menuItems = menuList.querySelectorAll('li'); 
+    const menuItems = menuList.querySelectorAll('li');
 
-    // Inicialmente ocultar el menú en pantallas pequeñas
     if (window.innerWidth <= 600) {
         menuList.style.display = 'none';
     }
@@ -18,23 +19,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
     menuItems.forEach(item => {
         item.addEventListener("click", function () {
-            // Oculta el menú solo si la pantalla es pequeña
             if (window.innerWidth <= 600) {
                 menuList.style.display = "none";
             } else {
-                menuList.style.display = 'flex'; // Muestra el menú en pantallas grandes
+                menuList.style.display = 'flex'; 
             }
 
-            // Desplaza la página hacia la sección correspondiente
             const targetId = this.querySelector("a").getAttribute("href");
             const targetElement = document.querySelector(targetId);
-            const headerHeight = 100; // Altura del header
+            const headerHeight = 100; 
             const offsetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
 
             window.scrollTo({
-                top: targetElement.offsetTop - headerHeight,
+                top: offsetPosition,
                 behavior: 'smooth'
-            });            A
+            });
         });
     });
+
 });
