@@ -59,6 +59,11 @@ body.light .download-button{
     background-color: var(--navy-blue);
 }
 
+body.light .download-button:hover{
+    background-color: var(--gold);
+    box-shadow: var(--box-shadow); 
+}
+
 body.light .skills h3{
     color: var(--turquoise);
 }
