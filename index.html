@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/@google/model-viewer@3.0.0/dist/model-viewer.min.js"></script>
-
 </head>
 <body>
     <header>
@@ -31,17 +30,21 @@
         </nav>
     </header>
     <aside class="btn-header">
-        <Button class="language"  aria-label="chage language">EN/ES</Button>  
-        <Button class="dark-mode" aria-label="dark model">Dark Mode</Button>  
+        <Button class="language"  aria-label="chage language">EN/ES</Button> 
+           
+        <Button class="switch" id="switch" aria-label="ligth model">
+            <span>🌞</span>
+            <span>🌚</span>
+        </Button>  
     </aside>
     <main>
         <div>
             <hr id="Home-header">
         </div>
-        <section id="Home">
+        <section id="Home" class="white-mode-section">
             <article class="text-column">
-                <h1>Hi, I'm Alejandra Rivera Rincón.</h1>
-                <p>Software Developer <br>
+                <h1 class="text-white_background">Hi, I'm Alejandra Rivera Rincón.</h1>
+                <p class="text-white_background">Software Developer <br>
                    Colombia <br><br>
                    In every aspect and process of the project I strive to exceed the client's expectations. I am always looking for new ways to improve and to evolve.</p>
             </article>
@@ -52,19 +55,19 @@
             </model-viewer>
         </section>
         <div><hr id="About-header"></div>
-        <section id="About">
+        <section id="About" class="white-mode-section">
             <article class="text-column-about">
-                <h2>About Me</h2>
+                <h2 class="text-white_background">About Me</h2>
                 <hr class="custom-hr">
-                <p>
+                <p class="text-white_background">
                     I have concluded a degree in Computer science Engineering with formation in software development, including web applications. I am passionate about researching and understanding each project thoroughly, which allows me to create detailed work plans. I strive to execute each stage with dedication, ensuring that both aesthetics and performance are optimal.
                 </p>
                 <br>
-                <p>
+                <p class="text-white_background">
                     Additionally, I have a strong interest in 3D architectural design, which focuses on creating realistic representations of buildings. I always seek innovation in every project, which enables me to effectively integrate technology and aesthetics.
                 </p>
                 <br>
-                <p>
+                <p class="text-white_background">
                     Every day, I commit to giving my best and continuing to learn to expand my knowledge and skills in this exciting field.
                 </p>
                 <br>
@@ -142,7 +145,7 @@
             </article>
         </section>
         <div><hr id="Projects-header"></div>
-        <section id="Projects">
+        <section id="Projects" class="white-mode-section">
             <div class="Projects-tittle">
                 <h2>My Projects</h2>
                 <hr class="custom-hr">

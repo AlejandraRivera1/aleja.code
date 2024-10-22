@@ -1,10 +1,3 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
 :root {
     --white: #ffffff;
     --soft-gray: #666666;
@@ -12,7 +5,9 @@
     --navy-blue: #003366;
     --turquoise: #00b2a9;
     --gold: #daa520;
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transparent:rgba(0, 178, 169, 0); 
+
+    --box-shadow: 0 4px 6px rgba(102, 102, 102, 0.3);
 
     --font-size-h1: 48px; 
     --font-size-h2: 36px; 
@@ -27,24 +22,115 @@
     --font-weight-regular: 400; 
 }
 
-/* Dark mode*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark-gray);
+    border: none;
+}
 
-/* ligth mode*/
-main{
+body.light {
     background-color: var(--white);
 }
+
+body.light main{
+    background-color: var(--white);
+}
+
+body.light .text-column h1{
+    color: var(--navy-blue);
+}
+
+body.light .text-column p{
+    color: var(--dark-gray);
+}
+
+body.light .text-column-about h2{
+    color: var(--navy-blue);
+}
+
+body.light .text-column-about p{
+    color: var(--dark-gray);
+}
+
+body.light .download-button{
+    background-color: var(--navy-blue);
+}
+
+body.light .skills h3{
+    color: var(--turquoise);
+}
+
+body.light .icon-name{
+    color: var(--dark-gray);
+}
+
+body.light .Projects-tittle h2{
+    color: var(--navy-blue);
+}
+
+/* ---------------------------Dark mode------------------------*/
+
+aside button{
+    background-color: var(--white);
+}
+
+aside button span{
+    background-color: var(--white);
+    border-radius: 1000px;
+}
+
+.switch{
+    font-size: 20px;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    background-color: var(--white);
+}
+
+.switch::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    gap: 3px;
+    border-radius: 50%;
+    background-color: var(--turquoise);
+    top: -2px;
+    left: -2px;
+    right: unset;
+    transition: .3s ease all;
+    box-shadow: 0 0 2px 2px rgb(255, 255, 255, 0.3);
+}
+
+body.light .switch::after {
+    left: calc(100% - 30px); /* Mueve el círculo a la derecha */
+}
+
+/* Modo oscuro */
+body:not(.light) .switch::after {
+    left: 0; /* Mantiene el círculo a la izquierda */
+}
+
 
 header {
     position: fixed;
     top: 0; 
     left: 0; 
     width: 100%;
-    background-color: var(--white);
     z-index: 1000;
     box-shadow: var(--box-shadow);
+    background-color: var(--navy-blue);
 }
 
 header nav {
+    background-color: var(--navy-blue);
     width: 100%;
     height: 100px;
     display: flex;
@@ -54,20 +140,26 @@ header nav {
     padding-right: 320px;
 }
 
+header nav span{
+    background-color: var(--navy-blue);
+}
+
 header nav a {
     text-decoration: none;
     cursor: pointer;
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-base);
-    color: var(--navy-blue);
+    color: var(--turquoise);
+    background-color: var(--navy-blue);
 }
 
 header nav a:hover {
-    color: var(--turquoise);
+    color: var(--gold);
 }
 
 header nav .nav-left-section a {
-    color: var(--navy-blue);
+    color: var(--turquoise);
+    
 }
 
 header nav .nav-left-section {
@@ -81,6 +173,7 @@ header nav .nav-right-section {
     list-style: none;
     align-items: center;
     gap: 40px; 
+    background-color: var(--navy-blue);
 }
 
 header nav img {
@@ -89,6 +182,7 @@ header nav img {
     margin-right: 15px;
     border-radius: 50%;
     border: 3px solid var(--gold);
+    background-color: var(--navy-blue);
 }
 
 aside{
@@ -99,15 +193,15 @@ aside{
     top: 0px; 
     right: 0;
     width: auto;
-    background-color: rgba(0, 178, 169, 0);
+    background-color: var(--transparent);
     z-index: 1000;
     width: auto;
     height: 100px;
     align-items: center;
     padding-right: 100px;
 }
-.language, .dark-mode {
-    background-color: var(--navy-blue);
+.language {
+    background-color: var(--turquoise);
     color: var(--white);
     border: none;
     border-radius: 5px;
@@ -121,14 +215,18 @@ aside{
     height: 30px;
 }
 
-.language:hover, .dark-mode:hover {
-    background-color: var(--turquoise);
+.language:hover {
+    background-color: var(--gold);
+}
+
+main{
+    background-color: var(--dark-gray);
 }
 
 #Home-header,
 #About-header,
 #Projects-header {
-    background-color: rgba(0, 178, 169, 0); /* Totalmente transparente */
+    background-color: var(--transparent)
     border: none; 
 }
 
@@ -138,15 +236,17 @@ aside{
     grid-template-columns: 1fr 1fr;
     max-width: 1200px;
     width: 100%;
-    background-color: var(--white);
     margin-top: 260px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 40px;
     gap: 20px;
+    background-color: var(--transparent);
+
 } 
 
 #Home .text-column {
+    background-color: var(--transparent);
     display: flex; 
     flex-direction: column;
     justify-content: center;
@@ -155,14 +255,16 @@ aside{
 
 .text-column h1{
     font-size: var(--font-size-h1); 
-    color: var(--navy-blue);         
+    color: var(--turquoise);   
+    background-color: var(--transparent);      
     font-weight: var(--font-weight-bold);
     margin-bottom: 20px;
 }
 
 .text-column p {
     font-size: var(--font-size-base); 
-    color: var(--dark-gray);           
+    color: var(--white); 
+    background-color: var(--transparent);          
     line-height: 1.6;                  
     font-weight: var(--font-weight-regular); 
 }
@@ -172,17 +274,18 @@ aside{
     width: 80%; 
     height: auto; 
     margin-left: auto;
-    margin-right: auto;              
+    margin-right: auto; 
+    background-color: var(--transparent);             
 }
 
 
 /* Estilo para la sección About */
 #About {
+    background-color: var(--transparent);
     display: grid;
     grid-template-columns: 1fr 1fr; 
     max-width: 1200px;
     width: 100%;
-    background-color: var(--white);
     margin-top: 160px;
     margin-left: auto;
     margin-right: auto;
@@ -191,12 +294,14 @@ aside{
 
 .text-column-about {
     padding-right: 40px;
+    background-color: var(--transparent);
 }
 
 .text-column-about h2{
-    color: var(--navy-blue);
+    color: var(--turquoise);
     font-size: var(--font-size-h2);
     font-weight: var(--font-weight-bold);
+    background-color: var(--transparent);
 }
 
 .custom-hr{
@@ -208,8 +313,16 @@ aside{
     border-radius: 5px;
 }
 
+.text-column-about p{
+    color: var(--white);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    background-color: var(--transparent);
+}
+
 
 .skills {
+    background-color: var(--transparent);
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -221,7 +334,8 @@ aside{
     text-align: center;
     width: 100%;
     margin: 20px;
-    color: var(--turquoise);
+    color: var(--gold);
+    background-color: var(--transparent);
     text-decoration: underline;
     font-size: var(--font-size-h3);
     font-weight: var(--font-weight-semibold);
@@ -231,25 +345,29 @@ aside{
     display: flex;
     flex-direction: column;
     align-items: center; 
-    margin: 10px; 
+    margin: 10px;
+    background-color: var(--transparent); 
 }
 
 .icon-item img {
     width: 40px; 
     height: 40px; 
+    background-color: var(--transparent);
 }
 
 .icon-name{
     font-size: var(--font-size-secondary);
     font-weight: var(--font-weight-regular);
-    color: var(--soft-gray);
-    text-align: center; 
+    color: var(--white);
+    text-align: center;
+    background-color: var(--transparent); 
 }
 
 .download-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--navy-blue); 
+    background-color: var(--turquoise);
+    box-shadow: var(--box-shadow); 
     color: var(--white);
     text-decoration: none;
     border-radius: 5px;
@@ -260,31 +378,38 @@ aside{
 }
 
 .download-button:hover {
-    background-color: var(--turquoise); 
+    background-color: var(--gold); 
+    box-shadow: var(--box-shadow); 
 }
 
 /* Estilo para los proyectos */
 #Projects{
-   width: 100%;
-   max-width: 1200px;
-   height: auto;
-   width: auto;
-   margin-top: 150px;
-   margin-left: auto;
-   margin-right: auto;
-   background-color: var(--white);
-   padding-left: 40px;
-   padding-right: 40px;
-   padding-bottom: 100px;
+    background-color: var(--transparent);
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    width: auto;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 100px;
+}
+
+.Projects-tittle{
+    background-color: var(--transparent);
 }
 
 .Projects-tittle h2{
-    color: var(--navy-blue);
+    background-color: var(--transparent);
+    color: var(--turquoise);
     font-size: var(--font-size-h2);
     font-weight: var(--font-weight-bold);
 }
 
 .projects-cars--slider{
+    background-color: var(--transparent);
     display: flex;
     justify-content: center;
     height: auto;
@@ -325,6 +450,7 @@ aside{
 
 .project-card h3{
     color: var(--turquoise);
+    background-color: var(--navy-blue);
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-h3);
     text-align: center;
@@ -333,6 +459,7 @@ aside{
 
 .project-card p{
     color: var(--white);
+    background-color: var(--navy-blue);
     font-weight: var(--font-weight-regular);
     font-size: var(--font-size-secondary);
     text-align: center;
@@ -340,6 +467,7 @@ aside{
 
 .project-card h4{
     color: var(--turquoise);
+    background-color: var(--navy-blue);
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-base);
     text-align: center;
@@ -351,6 +479,7 @@ aside{
     font-size: var(--font-size-terciary);
     font-weight: var(--font-weight-regular);
     color: var(--white);
+    background-color: var(--navy-blue);
     text-align: center;
 }
 
@@ -358,13 +487,16 @@ aside{
     display: flex;
     flex-wrap: column;
     justify-content: center;
+    background-color: var(--navy-blue);
 }
 
 .technologies h4 {
+    background-color: var(--navy-blue);
     margin-bottom: 10px;
 }
 
 .tech-item{
+    background-color: var(--navy-blue);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -372,12 +504,15 @@ aside{
 }
 
 .tech-items-container {
+    background-color: var(--navy-blue);
+
     display: flex; 
     justify-content: center; 
     flex-wrap: wrap; 
 }
 
 .tech-item img{
+    background-color: var(--navy-blue);
     width: 20px; 
     height: 20px;
 }
@@ -386,6 +521,7 @@ aside{
     display: inline-block;
     padding: 10px 20px;
     background-color: var(--turquoise); 
+    box-shadow: var(--box-shadow); 
     color: var(--white);
     text-decoration: none;
     text-align: center;
@@ -400,6 +536,7 @@ aside{
 .project-buttons {
     display: flex;
     justify-content: center; 
+    background-color: var(--navy-blue);
     gap: 15px;
     margin-top: auto; 
     margin-bottom: 10px;
@@ -407,6 +544,7 @@ aside{
 
 .btn:hover {
     background-color: var(--gold); 
+    box-shadow: var(--box-shadow); 
 }
 
 /* Estilo para el pie de pagina */
@@ -422,6 +560,7 @@ footer {
 .contact-column {
     margin-bottom: 0px; 
     text-align: center; 
+    background-color: var(--navy-blue);
 }
 
 .contact-info {
@@ -429,12 +568,14 @@ footer {
     align-items: center; 
     margin-bottom: 10px; 
     color: var(--white); 
+    background-color: var(--navy-blue);
 }
 
 .contact-icon {
     width: 40px;
     height: 40px; 
-    margin-right: 10px; 
+    margin-right: 10px;
+    background-color: var(--navy-blue); 
 }
 
 .contact-info a img[src*="photo.jpeg"] {
@@ -444,7 +585,8 @@ footer {
 
 .social-column {
     margin-top: 20px; 
-    text-align: center; 
+    text-align: start;
+    background-color: var(--navy-blue); 
 }
 
 .social-links {
@@ -462,18 +604,44 @@ footer {
     height: 60px; 
     margin: 10px; 
     text-decoration: none; 
+    background-color: var(--navy-blue);
 }
 
 .footer-bottom {
     color: var(--white); 
+    background-color: var(--navy-blue);
     font-size: var(--font-size-secondary); 
     font-weight: var(--font-weight-regular); 
     margin-top: 20px; 
     text-align: center; 
+    
 }
 
-h2, h3 {
-    color: var(--turquoise); 
+footer h2, h3 {
+    color: var(--turquoise);
+    background-color: var(--navy-blue); 
+}
+footer a {
+    background-color: var(--navy-blue); 
+}
+
+footer p {
+    background-color: var(--navy-blue); 
+}
+
+footer figure figcaption{
+    background-color: var(--navy-blue); 
+}
+
+footer ul{
+    background-color: var(--navy-blue);
+}
+
+footer ul li{
+    background-color: var(--navy-blue);
+}
+.contact-icon .aleja-code {
+    background-color: var(--navy-blue);
 }
 
 
@@ -581,8 +749,6 @@ h2, h3 {
         font-size: 16px;            
         border: none;               
         border-radius: 5px;         
-        background-color: var(--navy-blue); 
-        color: var(--white);        
         cursor: pointer;            
         text-align: center;         
     }
@@ -640,7 +806,7 @@ h2, h3 {
         position: absolute; 
         top: 100%; 
         left: 0; 
-        background-color: var(--white); 
+        background-color: var(--navy-blue); 
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
         z-index: 1000; 
         width: 100%; 
@@ -653,7 +819,7 @@ h2, h3 {
     header nav .menu-button {
         display: block; /* Muestra el botón "Menu" */
         background-color: transparent; 
-        color: var(--navy-blue);
+        color: var(--turquoise);
         font-size: 24px; 
         font-weight: var(--font-weight-bold); 
         border: none; 
@@ -669,7 +835,7 @@ h2, h3 {
 
     header nav .menu-button:hover {
         background-color: transparent; 
-        color: var(--turquoise);
+        color: var(--gold);
     }
 
     .text-column-about {
@@ -679,7 +845,7 @@ h2, h3 {
 
 @media (max-width: 480px) {
     .nav-left-section span {
-        display: none; /* Oculta solo el texto en el span */
+        display: none; 
     }
 }
 

@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const languageButton = document.querySelector('.language');
-    const darkModeButton = document.querySelector('.dark-mode');
     const menuButton = document.querySelector('.menu-button');
     const menuList = document.querySelector('.nav-right-section');
     const menuItems = menuList.querySelectorAll('li');
+    const btnSwitch = document.querySelector('#switch');
 
+
+    //Hamburguer Menu
     if (window.innerWidth <= 600) {
         menuList.style.display = 'none';
     }
@@ -36,5 +37,27 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     });
+
+
+    //Dark Mode And Light Mode
+    document.addEventListener("DOMContentLoaded", () => {
+        if (localStorage.getItem('dark-mode') === 'true') {
+            document.body.classList.add('light'); 
+            btnSwitch.classList.add('active'); 
+        }
+    });
+
+    btnSwitch.addEventListener("click", () => {
+        document.body.classList.toggle('light'); 
+        btnSwitch.classList.toggle('active');
+    
+        
+        if (document.body.classList.contains('light')) {
+            localStorage.setItem('dark-mode', 'true'); 
+        } else {
+            localStorage.setItem('dark-mode', 'false');
+        }
+    });
+    
 
 });
