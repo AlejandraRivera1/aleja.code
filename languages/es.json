@@ -1,0 +1,66 @@
+{
+  "header": {
+      "navLinks": [
+          { "text": "Inicio" },
+          { "text": "Acerca de" },
+          { "text": "Proyectos" },
+          { "text": "Contacto" }
+      ]
+  },
+  "Home": {
+        "title": "Hola, soy Alejandra Rivera Rincón.",
+        "description": "En cada aspecto y proceso del proyecto, me esfuerzo por superar las expectativas del cliente. Siempre estoy buscando nuevas formas de mejorar y evolucionar."
+  },
+  "About": {
+      "title": "Acerca de Mí",
+      "description": [
+          "He concluido una carrera en Ingeniería en Sistemas con formación en desarrollo de software, incluidas aplicaciones web. Me apasiona investigar y comprender a fondo cada proyecto, lo que me permite crear planes de trabajo detallados. Me esfuerzo por ejecutar cada etapa con dedicación, asegurando que tanto el diseño como el rendimiento sean óptimos.",
+          "Además, tengo un gran interés en el diseño arquitectónico en 3D, que se centra en crear representaciones realistas de edificios. Siempre busco la innovación en cada proyecto, lo que me permite integrar eficazmente la tecnología y el diseño.",
+          "Cada día, me comprometo a dar lo mejor de mí y a seguir aprendiendo para ampliar mis conocimientos y habilidades en este emocionante campo."
+      ],
+      "downloadCV": "Descargar CV"
+  },
+  "Projects": {
+    "title": "Mis Proyectos",
+    "projects": [
+        {
+            "name": "Mi Portafolio Web",
+            "description": "Este portafolio muestra mis proyectos de diseño y desarrollo web. Explora este sitio, un ejemplo de mi trabajo que combina creatividad y funcionalidad para ofrecer experiencias digitales efectivas.",
+            "technologies": ["HTML", "CSS", "JavaScript", "Blender"],
+            "viewProject": "Ver Proyecto",
+            "viewRepository": "Ver Repositorio",
+            "projectLink": "https://alejandrarivera1.github.io/aleja.code/",
+            "repositoryLink": "https://github.com/AlejandraRivera1/aleja.code",
+            "image": "images/project1.png"
+        },
+        {
+            "name": "Edificio One Leadenhall",
+            "description": "Este modelo es una representación de un edificio en la ciudad de Londres, lo cual fue un buen desafío ya que no había planos arquitectónicos ni suficientes fotos actuales disponibles.",
+            "technologies": ["Blender"],
+            "viewProject": "Ver Proyecto",
+            "viewRepository": "Ver Repositorio",
+            "projectLink": "https://sketchfab.com/models/adaa136fc6724e82bcfc6d6d49c4a7b1/embed",
+            "repositoryLink": "https://sketchfab.com/riverarinconalejandra1",
+            "image": "images/project2.png"
+        },
+        {
+            "name": "Edificio York House",
+            "description": "Este modelo es una representación de un edificio en la ciudad de Londres. Este edificio fue el primer proyecto que hice cuando recién estaba aprendiendo a usar las herramientas de Blender.",
+            "technologies": ["Blender"],
+            "viewProject": "Ver Proyecto",
+            "viewRepository": "Ver Repositorio",
+            "projectLink": "https://sketchfab.com/models/1106d506f9d0463f8525a5e08e6ff5ac/embed",
+            "repositoryLink": "https://sketchfab.com/riverarinconalejandra1",
+            "image": "images/ejemploProyecto.png"
+        }
+    ]
+  },
+  "footer": {
+    "contactMe": {
+        "title": "Contáctame"
+    },
+    "getToKnowMe": {
+        "title": "¡Conóceme!"
+    }
+}
+}

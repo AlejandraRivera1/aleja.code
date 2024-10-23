@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script type="module" src="https://unpkg.com/@google/model-viewer@3.0.0/dist/model-viewer.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
     <header>
@@ -21,17 +21,23 @@
             <div class="nav-div-right-section">
                 <button class="menu-button" aria-label="Abrir Menú">☰</button>
                 <ul class="nav-right-section">
-                    <li><a href="#Home-header">Home</a></li>
-                    <li><a href="#About-header">About</a></li>
-                    <li><a href="#Projects-header">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#Home-header" id="home-link">Home</a></li>
+                    <li><a href="#About-header" id="about-link">About</a></li>
+                    <li><a href="#Projects-header" id="projects-link">Projects</a></li>
+                    <li><a href="#contact" id="contact-link">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <aside class="btn-header">
-        <Button class="language"  aria-label="chage language">EN/ES</Button> 
-           
+        <div id="flags" class="flags">
+            <div class="flags_item" data-language="en" >
+                <img src="images/en.png" alt="English" class="flags_image">
+            </div>
+            <div class="flags_item" data-language="es">
+                <img src="images/es.png" alt="Spanish" class="flags_image">
+            </div>
+        </div>           
         <Button class="switch" id="switch" aria-label="ligth model">
             <span>🌞</span>
             <span>🌚</span>
@@ -43,10 +49,9 @@
         </div>
         <section id="Home" class="white-mode-section">
             <article class="text-column">
-                <h1 class="text-white_background">Hi, I'm Alejandra Rivera Rincón.</h1>
-                <p class="text-white_background">Software Developer <br>
-                   Colombia <br><br>
-                   In every aspect and process of the project I strive to exceed the client's expectations. I am always looking for new ways to improve and to evolve.</p>
+                <h1 id="home-tittle" class="text-white_background">Hi, I'm Alejandra Rivera Rincón.</h1>
+                <p class="text-white_background">Software Developer <br> Colombia</p>
+                <p id="home-description">In every aspect and process of the project I strive to exceed the client's expectations. I am always looking for new ways to improve and to evolve.</p>
             </article>
             <model-viewer id="laptop-model" 
               src="models/laptop.glb" 
@@ -57,9 +62,9 @@
         <div><hr id="About-header"></div>
         <section id="About" class="white-mode-section">
             <article class="text-column-about">
-                <h2 class="text-white_background">About Me</h2>
+                <h2 id="about-tittle" class="text-white_background">About Me</h2>
                 <hr class="custom-hr">
-                <p class="text-white_background">
+                <p id="about-description" class="text-white_background">
                     I have concluded a degree in Computer science Engineering with formation in software development, including web applications. I am passionate about researching and understanding each project thoroughly, which allows me to create detailed work plans. I strive to execute each stage with dedication, ensuring that both aesthetics and performance are optimal.
                 </p>
                 <br>
@@ -72,7 +77,7 @@
                 </p>
                 <br>
                 <a href="https://drive.google.com/file/d/14zQgiWM_zyJGq833PNYWJR8O6ds68GAq/view?usp=sharing" 
-                download class="download-button">Download CV</a>
+                download id="download-btn" class="download-button">Download CV</a>
             </article>
             
             <article class="skills">
@@ -147,10 +152,10 @@
         <div><hr id="Projects-header"></div>
         <section id="Projects" class="white-mode-section">
             <div class="Projects-tittle">
-                <h2>My Projects</h2>
+                <h2 id="projects-tittle">My Projects</h2>
                 <hr class="custom-hr">
             </div>
-            <section class="projects-cars--slider">
+            <section id="projects-section" class="projects-cars--slider">
                 <article class="project-card">
                     <img src="images/project1.png" alt="Project 1" class="project-image">
                     <h3>My Web Portfolio
@@ -200,8 +205,8 @@
                         </div>
                     </section>
                     <section class="project-buttons">
-                        <a href="https://sketchfab.com/3d-models/yorkhousebuilding-1106d506f9d0463f8525a5e08e6ff5ac" class="btn" target="_blank">View Project</a>
-                        <a href="https://sketchfab.com/3d-models/yorkhousebuilding-1106d506f9d0463f8525a5e08e6ff5ac" class="btn" target="_blank">View Repository</a>
+                        <a href="https://sketchfab.com/models/adaa136fc6724e82bcfc6d6d49c4a7b1/embed" class="btn" target="_blank">View Project</a>
+                        <a href="https://sketchfab.com/riverarinconalejandra1" class="btn" target="_blank">View Repository</a>
                     </section>
                 </article>
                 <article class="project-card">
@@ -219,8 +224,8 @@
                         </div>
                     </section>
                     <section class="project-buttons">
-                        <a href="https://sketchfab.com/3d-models/yorkhousebuilding-1106d506f9d0463f8525a5e08e6ff5ac" class="btn" target="_blank">View Project</a>
-                        <a href="https://sketchfab.com/3d-models/yorkhousebuilding-1106d506f9d0463f8525a5e08e6ff5ac" class="btn" target="_blank">View Repository</a>
+                        <a href="https://sketchfab.com/models/1106d506f9d0463f8525a5e08e6ff5ac/embed" class="btn" target="_blank">View Project</a>
+                        <a href="https://sketchfab.com/riverarinconalejandra1" class="btn" target="_blank">View Repository</a>
                     </section>
                 </article>
             </section>
@@ -229,30 +234,30 @@
     </main>
     <footer id="contact">
             <article class="contact-column">
-                <h2>Contact Me</h3>
+                <h2 id="footer-tittle">Contact Me</h3>
                 <hr class="custom-hr">
                 <figure class="contact-info">
                     <a href="#Home">
                         <img src="images/photo.jpeg" alt="photo" class="contact-icon aleja-code">
                     </a>
-                    <figcaption>Alejandra Rivera Rincón</figcaption>
+                    <figcaption id="footer-name">Alejandra Rivera Rincón</figcaption>
                 </figure>
                 <figure class="contact-info">
                     <a href="https://wa.me/573117495030" target="_blank">
                         <img src="images/whatsapp.png" alt="WhatsApp" class="contact-icon">
                     </a>
-                    <figcaption>+57 350 668 3604</figcaption>
+                    <figcaption id="footer-whatsapp">+57 350 668 3604</figcaption>
                 </figure>
                 <figure class="contact-info">
                     <a href="mailto:riverarinconalejandra1@gmail.com">
                         <img src="images/gmail.png" alt="Email" class="contact-icon">
                     </a>
-                    <figcaption>riverarinconalejandra1@gmail.com</figcaption>
+                    <figcaption id="footer-email">riverarinconalejandra1@gmail.com</figcaption>
                 </figure>
             </article>
             
             <article class="social-column">
-                <h3>Get to know me!</h3>
+                <h3 id="Know-me-tittle">Get to know me!</h3>
 
                 <ul class="social-links">
                     <li>

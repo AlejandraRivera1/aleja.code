@@ -78,6 +78,31 @@ body.light .Projects-tittle h2{
 
 /* ---------------------------Dark mode------------------------*/
 
+aside div {
+    background-color: var(--transparent);
+}
+
+.flags{
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.flags_item {
+    width: 30px;
+    height: 30px;
+}
+
+.flags_image {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: var(--transparent);
+}
+
 aside button{
     background-color: var(--white);
 }
@@ -290,7 +315,7 @@ main{
     grid-template-columns: 1fr 1fr; 
     max-width: 1200px;
     width: 100%;
-    margin-top: 160px;
+    margin-top: 180px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 40px;
@@ -657,7 +682,7 @@ footer ul li{
         justify-content: space-between; 
         align-items: flex-start; 
     }
-    
+  
     .contact-column, .social-column {
         flex: 1; 
         margin-bottom: 0; 
