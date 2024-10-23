@@ -18,7 +18,8 @@
             "Additionally, I have a keen interest in 3D architectural design, which focuses on creating realistic representations of buildings. I always seek innovation in every project, enabling me to effectively integrate technology and design.",
             "Every day, I am committed to giving my best and continuing to learn to expand my knowledge and skills in this exciting field."
         ],
-        "downloadCV": "Download CV"
+        "downloadCV": "Download CV",
+        "cvLink": "https://drive.google.com/file/d/14zQgiWM_zyJGq833PNYWJR8O6ds68GAq/view?usp=drive_link"
     },
     "Projects": {
         "title": "My Projects",
@@ -63,6 +64,5 @@
         "getToKnowMe": {
             "title": "Get to know me!"
         }
-    }
-    
+    }    
 }

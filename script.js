@@ -98,8 +98,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 aboutDescription[index].textContent = paragraph || '';
             }
         });
-        document.querySelector('#download-btn').textContent = data.About.downloadCV || '';
 
+        // Actualiza el botón de descarga según el idioma
+        const downloadButton = document.querySelector('#download-btn');
+        if (downloadButton) {
+            downloadButton.textContent = data.About.downloadCV || ''; // Actualiza el texto del botón
+
+            // Cambia el enlace según el idioma
+            downloadButton.href = savedLanguage === 'es' 
+                ? 'https://drive.google.com/file/d/1yrxdSlZvrYDJCwh3msEIOd5UwIIsd0YB/view?usp=sharing' // Enlace a la versión en español
+                : 'https://drive.google.com/file/d/14zQgiWM_zyJGq833PNYWJR8O6ds68GAq/view?usp=drive_link'; // Enlace a la versión en inglés
+        }
+        
         // Actualiza la sección Projects
         const projectsTitle = document.querySelector('#Projects h2');
         if (projectsTitle) projectsTitle.textContent = data.Projects.title || '';
