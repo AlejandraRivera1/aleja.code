@@ -47,6 +47,11 @@ body.light .text-column p{
     color: var(--dark-gray);
 }
 
+body.light .text-white-background p{
+    color: var(--dark-gray);
+    background-color: var(--transparent);
+}
+
 body.light .text-column-about h2{
     color: var(--navy-blue);
 }
@@ -271,8 +276,11 @@ main{
     padding: 0 40px;
     gap: 20px;
     background-color: var(--transparent);
-
 } 
+
+#Home .text-white-background{
+    background-color: var(--transparent);
+}
 
 #Home .text-column {
     background-color: var(--transparent);
@@ -291,6 +299,14 @@ main{
 }
 
 .text-column p {
+    font-size: var(--font-size-base); 
+    color: var(--white); 
+    background-color: var(--transparent);          
+    line-height: 1.6;                  
+    font-weight: var(--font-weight-regular); 
+}
+
+.text-white-background p {
     font-size: var(--font-size-base); 
     color: var(--white); 
     background-color: var(--transparent);          
